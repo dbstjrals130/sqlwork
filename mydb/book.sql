@@ -30,8 +30,12 @@ SELECT DISTINCT publisher FROM book;
 
 -- 가격이 20000원 미만인 도서를 검색하시오(오름차순 정렬)
 SELECT * FROM book
-WHERE price < 20000
+WHERE price <= 20000
 ORDER BY price;
+
+-- 가격이 13000원 도서를 검색하시오
+SELECT bookname FROM book
+WHERE price <> 13000;
 
 -- 가격이 10000원 이상이고 20000원 이하인 도서를 검색하시오.
 -- BETWEEN A AND B(>=, <=)
@@ -42,9 +46,9 @@ WHERE price BETWEEN 10000 AND 20000;
 SELECT publisher FROM book
 WHERE bookname LIKE '축구의 역사';
 
--- 도서 이름에 '축구'가 포함된 출판사를 검색하시오
+-- 도서 이름에 '축구'가 포함되지 않은 출판사를 검색하시오
 SELECT bookname, publisher FROM book
-WHERE bookname LIKE '%축구%';
+WHERE bookname NOT LIKE '%축구%';
 
 -- 축구에 관한 도서 중 가격이 20000원 이상인 도서를 검색하시오
 SELECT bookname, price FROM book
@@ -60,7 +64,18 @@ ORDER BY bookname;
 SELECT * FROM book
 ORDER BY price ASC, bookname DESC;
 
+-- 도서 테이블에 있는 모든 출판사를 검색하시오(중복제거)
+-- DISTINCT는 중복을 없애주는 명령어
+SELECT DISTINCT publisher FROM book;
 
+-- 출판사가 '굿스포츠' 또는 '대한미디어'인 도서를 검색하시오
+SELECT * FROM book
+WHERE publisher = '굿스포츠' OR publisher = '대한미디어';
+
+-- 출판사가 '굿스포츠' 또는 '대한미디어'인 도서를 제외하고 검색하시오
+-- NOT IN() 함수 사용
+SELECT * FROM book
+WHERE publisher NOT IN ('굿스포츠', '대한미디어');
 
 
 COMMIT;

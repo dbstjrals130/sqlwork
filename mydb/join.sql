@@ -2,15 +2,17 @@
 -- 동등조인(equl join) : 조인 조건이 정확히 일치하는 경우에 결과 출력
 -- 외부조인 : 조인 조건이 정확히 일치하지 않아도 모든 결과를 출력
 
+SELECT * FROM book;
+SELECT * FROM customer;
+SELECT * FROM orders;
+
 -- 고객(customer)과 고객의 주문(order)에 관한 데이터를 모두 검색하시오
--- 고객별 주문 금액의 총액을 출력(Group by 결과)
--- 김연아 고객의 주문 총금액을 출력(Having으로 제한을 둠)
-SELECT cus.custid, cus.name, SUM(ord.saleprice)
+SELECT cus.name, ord.saleprice
 FROM customer cus, orders ord
-WHERE cus.custid = ord.custid
-GROUP BY cus.custid, cus.name
- HAVING cus.name = '김연아'
-ORDER BY cus.name;
+WHERE cus.custid = ord.custid;
+--GROUP BY cus.custid, cus.name
+-- HAVING cus.name = '김연아'
+--ORDER BY cus.name;
 
 
 -- 주문하지 않은 데이터도 모두 검색

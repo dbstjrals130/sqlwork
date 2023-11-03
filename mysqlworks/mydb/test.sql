@@ -1,4 +1,3 @@
-
 -- mydb 생성
 create database mydb;
 
@@ -6,8 +5,8 @@ create database mydb;
 use mydb;
 
 create table test(
-	no		int,		     	-- 숫자형
-    msg		varchar(100)	    -- 문자자료형
+	no   int,           -- 숫자형
+    msg  varchar(100)   -- 문자자료형
 );
 
 insert into test values (1, '좋은 하루 되세요~');

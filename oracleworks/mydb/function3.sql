@@ -30,7 +30,7 @@ SELECT ename,
        salary,
        CASE
          WHEN salary >= 3500000 THEN '과장'
-         WHEN salary >= 2500000 AND salary < 3500000 THEN '대리'
+         WHEN salary >= 2500000 THEN '대리'
          ELSE '사원'
        END 직급
 FROM emp;

@@ -31,3 +31,6 @@ SELECT * FROM date_test2;
 
 SELECT * FROM date_test1;
 DROP TABLE date_test2;
+
+
+

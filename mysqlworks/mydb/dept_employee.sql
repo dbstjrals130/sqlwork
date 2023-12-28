@@ -1,3 +1,4 @@
+
 -- 부서, 사원 테이블 생성
 create table department(
 	deptid    int primary key,
@@ -26,3 +27,5 @@ insert into employee values (105, '양신입', 25, null, 10);
 select * from department;
 select * from employee;
 commit;
+
+

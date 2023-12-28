@@ -1,3 +1,4 @@
+
 use mydb;
 
 -- news 테이블 생성
@@ -40,3 +41,4 @@ from news;
 
 
 COMMIT;
+

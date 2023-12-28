@@ -1,3 +1,4 @@
+
 -- mydb 생성
 create database mydb;
 
@@ -14,3 +15,4 @@ insert into test values (2, 'Good Luck!!');
 
 select * from test;
 commit;
+

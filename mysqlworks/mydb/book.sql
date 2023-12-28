@@ -28,3 +28,4 @@ where publisher in('굿스포츠', '대한미디어');
 
 select * from book
 where price between 10000 and 20000;
+

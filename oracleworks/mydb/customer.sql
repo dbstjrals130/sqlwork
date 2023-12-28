@@ -1,8 +1,9 @@
+-- 绊按 抛捞喉 积己
 CREATE TABLE customer(
-    custid      NUMBER PRIMARY KEY,
-    name        VARCHAR(40) NOT NULL,
-    address     VARCHAR(50),
-    phone       VARCHAR(20)
+    custid    NUMBER PRIMARY KEY,
+    name      VARCHAR2(40) NOT NULL,
+    address   VARCHAR2(50),
+    phone     VARCHAR2(20)
 );
 
 -- 绊按 积己

@@ -1,3 +1,4 @@
+
 select * from department;
 select * from employee;
 -- 삽입 오류 : 부서 테이블에 아이디가 30이 없어서 에러
@@ -88,3 +89,6 @@ select empname,
        rank() over(order by sal desc) 급여순위1,
        dense_rank() over(order by sal desc) 급여순위2
 from employee;
+
+
+

@@ -1,6 +1,8 @@
 -- bookmall select
 use mydb;
 
+
+
 select count(*) as 총판매건수
 from orders;
 
@@ -29,3 +31,5 @@ select cs.name,
        od.saleprice
   from customer cs left join orders od
   on cs.custid = od.custid;
+
+
